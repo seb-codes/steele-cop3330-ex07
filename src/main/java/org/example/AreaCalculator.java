@@ -8,6 +8,8 @@ import java.util.Scanner;
 
 public class AreaCalculator {
     public static void main(String[] args) {
+        final double CONVERSION_FACTOR = 0.09290304;
+
         Scanner getWidth = new Scanner(System.in);
         Scanner getLength = new Scanner(System.in);
 
@@ -20,7 +22,7 @@ public class AreaCalculator {
         System.out.print(String.format("You entered dimensions of %d feet by %d feet.",length, width));
 
         Integer area_ft = length * width;
-        Double area_m  = area_ft * 0.09290304;
+        Double area_m  = area_ft * CONVERSION_FACTOR;
 
         System.out.print(String.format("\nThe area is\n%d square feet\n%.03f square meters",area_ft, area_m));
     }
